@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:pages="clr-namespace:TextToBarcode.Pages"
+             xmlns:viewModels="clr-namespace:TextToBarcode.ViewModels"
+             x:Class="TextToBarcode.Pages.MainPage"
+             x:TypeArguments="viewModels:CameraViewViewModel"
+             x:DataType="viewModels:CameraViewViewModel">
+
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20"
+        Orientation="Vertical">
+        <toolkit:CameraView
+            x:Name="Camera"
+            SelectedCamera="{Binding SelectedCamera}"
+            CameraFlashMode="Off">
+            <toolkit:CameraView.Behaviors>
+                <toolkit:EventToCommandBehavior
+                    EventName="MediaCaptured"
+                    x:TypeArguments="toolkit:MediaCapturedEventArgs"
+                    Command="{Binding BindingContext.MediaCapturedCommand, Source={x:Reference Camera}}"/>
+            </toolkit:CameraView.Behaviors>
+        </toolkit:CameraView>
+        <Button Command="{Binding CaptureImageCommand, Source={x:Reference Camera}, x:DataType=toolkit:CameraView}" 
+                        CommandParameter="{Binding Token}"
+                        Text="Capture Image"
+                Margin="0,10"/>
+        <Label
+            Text="{Binding ExtractedText}"
+            FontSize="48"
+            HorizontalOptions="Center"
+            FontFamily="EAN13Font"
+            />
+
+
+    </StackLayout>
+
+</pages:BasePage>

@@ -1,0 +1,7 @@
+The application "ISBN to Barcode" does not collect any data from users other than that which is gathered by third-party services.
+List of services:
+- Google Play Store (https://play.google.com/about/play-terms/ & https://policies.google.com/privacy?hl=en)
+- Google ML Kit (https://developers.google.com/ml-kit/terms)
+I don't use any data which is collected by these services.
+
+For any questions reach out to: privacy@gbuch.dev
