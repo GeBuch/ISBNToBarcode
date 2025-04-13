@@ -4,4 +4,11 @@ List of services:
 - Google ML Kit (https://developers.google.com/ml-kit/terms)
 I don't use any data which is collected by these services.
 
+Other Frameworks and Tools:
+- .NET MAUI (https://dotnet.microsoft.com/en-us/platform/dotnet-maui)
+- .NET CommunityToolkit (https://github.com/CommunityToolkit/dotnet)
+- .NET CommunityToolkit MAUI (https://github.com/CommunityToolkit/Maui)
+- Plugin.Maui.OCR (https://github.com/kfrancis/ocr)
+
+
 For any questions reach out to: privacy@gbuch.dev
